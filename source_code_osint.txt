@@ -1,0 +1,54 @@
+======================================================================
+              ORGANIZATIONAL RECON & INFRASTRUCTURE CHEAT SHEET
+======================================================================
+
+1. RECONNAISSANCE & SCOPE ISOLATION
+----------------------------------------------------------------------
+# Target the official GitHub organization space
+org:yourcompany
+
+# Include repositories forked by users or external entities
+org:yourcompany fork:true
+
+# Target the enterprise account scope
+enterprise:yourcompany
+
+
+2. REFINING BY FILE PATHS & FRAMEWORKS
+----------------------------------------------------------------------
+# Isolate searches to configuration or build directories
+org:yourcompany path:config/
+org:yourcompany path:deployment/
+
+# Filter by language configurations or tech stack assets
+org:yourcompany language:typescript
+org:yourcompany language:python
+org:yourcompany language:go
+
+
+3. COMPONENT & ARCHITECTURE TARGETING
+----------------------------------------------------------------------
+# Locate orchestration manifests and environment templates
+org:yourcompany filename:docker-compose.yml
+org:yourcompany filename:package.json
+org:yourcompany filename:pom.xml
+org:yourcompany filename:go.mod
+
+# Identify structured data definitions and database layouts
+org:yourcompany filename:schema.sql
+org:yourcompany "CREATE TABLE" extension:sql
+
+
+4. SUBDOMAIN & INTERMEDIARY ENDPOINT MAPPING
+----------------------------------------------------------------------
+# Locate references to development or testing environments
+"dev.yourcompany.com"
+"staging.yourcompany.com"
+"internal.yourcompany.com"
+
+
+5. CLI-BASED CODE SEARCH (GITHUB CLI)
+----------------------------------------------------------------------
+# Execute a direct code query returning specific metadata fields
+gh search code "yourcompany.com" --owner="yourcompany" --json path,repository,url
+======================================================================

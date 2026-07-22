@@ -1,0 +1,8 @@
+// What you expected:
+let userInput = "5 * 10";
+eval(userInput); // Result: 50 (Harmless)
+
+//But what happens when a malicious user or an automation script types something else entirely? Because eval() executes anything, an attacker can inject system commands:
+// What an attacker types into your calculator:
+let userInput = "require('child_process').exec('rm -rf /')"; 
+eval(userInput);
